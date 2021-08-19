@@ -22,11 +22,11 @@ class Monster < Character
       @transform_flag = true
       transform
     end
-
-    puts "#{@name}の攻撃"
-
+    
     damage = calculate_damage(brave)
     cause_damage(target: brave, damage: damage)
+
+    attack_message
 
     puts "#{brave.name}の残りHPは#{brave.hp}だ"
   end
